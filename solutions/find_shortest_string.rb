@@ -1,3 +1,5 @@
+require 'benchmark'
+
 def find_shortest_string(arr)
   # THIS IS THE LONGER WAY OF DOING THE SAME THING ON LINES 13-15
   # shortest = arr[0]
@@ -46,6 +48,24 @@ if __FILE__ == $PROGRAM_NAME
   avg_time = (Time.now - start_time) / 1000.0
   puts avg_time
 end
+
+# long_array = []
+#   arr = (0...50).map { ('a'..'z').to_a[rand(26)] }
+#   100.times do 
+#     str = arr.slice(rand(0..30), rand(1..20)).join
+#     long_array.append(str)
+
+#   end
+#   total_time = 0
+#   1000.times do
+#     time = Benchmark.measure {
+#       find_shortest_string(long_array)
+#     }
+#     total_time = total_time + time.real
+#   end
+#   puts "Average Time:"
+#   puts total_time/1000
+# end
 
 # Please add your pseudocode to this file
 ####################################################################################
